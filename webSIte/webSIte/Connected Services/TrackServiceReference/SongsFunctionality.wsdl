@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SongsFunctionality" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60336/SongsFunctionality.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60336/SongsFunctionality.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60336/SongsFunctionality.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISongsFunctionality_addSong_InputMessage">
+    <wsdl:part name="parameters" element="tns:addSong" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_addSong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addSongResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_removeSong_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeSong" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_removeSong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeSongResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_addAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAlbum" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_addAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_GetSong_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSong" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_GetSong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSongResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_getAllSongs_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllSongs" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_getAllSongs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllSongsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_getSongsByGenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSongsByGenre" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_getSongsByGenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSongsByGenreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_getSongsByAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSongsByAlbum" />
+  </wsdl:message>
+  <wsdl:message name="ISongsFunctionality_getSongsByAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSongsByAlbumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISongsFunctionality">
+    <wsdl:operation name="addSong">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/addSong" message="tns:ISongsFunctionality_addSong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/addSongResponse" message="tns:ISongsFunctionality_addSong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeSong">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/removeSong" message="tns:ISongsFunctionality_removeSong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/removeSongResponse" message="tns:ISongsFunctionality_removeSong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/addAlbum" message="tns:ISongsFunctionality_addAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/addAlbumResponse" message="tns:ISongsFunctionality_addAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSong">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/GetSong" message="tns:ISongsFunctionality_GetSong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/GetSongResponse" message="tns:ISongsFunctionality_GetSong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllSongs">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/getAllSongs" message="tns:ISongsFunctionality_getAllSongs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/getAllSongsResponse" message="tns:ISongsFunctionality_getAllSongs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSongsByGenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/getSongsByGenre" message="tns:ISongsFunctionality_getSongsByGenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/getSongsByGenreResponse" message="tns:ISongsFunctionality_getSongsByGenre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSongsByAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISongsFunctionality/getSongsByAlbum" message="tns:ISongsFunctionality_getSongsByAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISongsFunctionality/getSongsByAlbumResponse" message="tns:ISongsFunctionality_getSongsByAlbum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISongsFunctionality" type="tns:ISongsFunctionality">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addSong">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/addSong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeSong">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/removeSong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAlbum">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/addAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSong">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/GetSong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSongs">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/getAllSongs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSongsByGenre">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/getSongsByGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSongsByAlbum">
+      <soap:operation soapAction="http://tempuri.org/ISongsFunctionality/getSongsByAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SongsFunctionality">
+    <wsdl:port name="BasicHttpBinding_ISongsFunctionality" binding="tns:BasicHttpBinding_ISongsFunctionality">
+      <soap:address location="http://localhost:60336/SongsFunctionality.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserFunctionality" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60336/UserFunctionality.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60336/UserFunctionality.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60336/UserFunctionality.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserFunctionality_registerNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_registerNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_updateReadyExistingUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateReadyExistingUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_updateReadyExistingUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateReadyExistingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getIndividualUserBYID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getIndividualUserBYID" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getIndividualUserBYID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getIndividualUserBYIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getUserByEmailNPass_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByEmailNPass" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getUserByEmailNPass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByEmailNPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getActiveUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getActiveUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getActiveUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getActiveUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getInactiveUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInactiveUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_getInactiveUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInactiveUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_AuthoriseLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthoriseLogin" />
+  </wsdl:message>
+  <wsdl:message name="IUserFunctionality_AuthoriseLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthoriseLoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserFunctionality">
+    <wsdl:operation name="registerNewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/registerNewUser" message="tns:IUserFunctionality_registerNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/registerNewUserResponse" message="tns:IUserFunctionality_registerNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReadyExistingUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/updateReadyExistingUser" message="tns:IUserFunctionality_updateReadyExistingUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/updateReadyExistingUserResponse" message="tns:IUserFunctionality_updateReadyExistingUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getIndividualUserBYID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/getIndividualUserBYID" message="tns:IUserFunctionality_getIndividualUserBYID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/getIndividualUserBYIDResponse" message="tns:IUserFunctionality_getIndividualUserBYID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserByEmailNPass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/getUserByEmailNPass" message="tns:IUserFunctionality_getUserByEmailNPass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/getUserByEmailNPassResponse" message="tns:IUserFunctionality_getUserByEmailNPass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/getAllUsers" message="tns:IUserFunctionality_getAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/getAllUsersResponse" message="tns:IUserFunctionality_getAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getActiveUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/getActiveUsers" message="tns:IUserFunctionality_getActiveUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/getActiveUsersResponse" message="tns:IUserFunctionality_getActiveUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInactiveUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/getInactiveUsers" message="tns:IUserFunctionality_getInactiveUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/getInactiveUsersResponse" message="tns:IUserFunctionality_getInactiveUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserFunctionality/AuthoriseLogin" message="tns:IUserFunctionality_AuthoriseLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserFunctionality/AuthoriseLoginResponse" message="tns:IUserFunctionality_AuthoriseLogin_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserFunctionality" type="tns:IUserFunctionality">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registerNewUser">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/registerNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReadyExistingUser">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/updateReadyExistingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIndividualUserBYID">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/getIndividualUserBYID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserByEmailNPass">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/getUserByEmailNPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/getAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/getActiveUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInactiveUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/getInactiveUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseLogin">
+      <soap:operation soapAction="http://tempuri.org/IUserFunctionality/AuthoriseLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserFunctionality">
+    <wsdl:port name="BasicHttpBinding_IUserFunctionality" binding="tns:BasicHttpBinding_IUserFunctionality">
+      <soap:address location="http://localhost:60336/UserFunctionality.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
